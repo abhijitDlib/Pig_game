@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-weight: 400;
+  color: #333;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(243, 77, 12) 0%,
+    rgb(240, 23, 139) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-board {
+  position: relative;
+}
+.row {
+  width: 85rem;
+  font-size: 2rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  display: flex;
+}
+.col-1-of-2 {
+  display: flex;
+  flex: 1;
+  background-color: rgb(234, 137, 195);
+
+  flex-direction: column;
+  padding: 4rem;
+  align-items: center;
+  position: relative;
+}
+.player__name {
+  letter-spacing: 0.2rem;
+  margin: 1rem;
+}
+.score__total {
+  font-size: 6rem;
+  /* font-weight: 500; */
+  color: rgb(240, 23, 139);
+  margin-bottom: 15rem;
+  margin-top: 5rem;
+}
+.score__current {
+  background-color: rgb(240, 23, 139);
+  padding: 1rem 4rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+}
+.score {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+.btn-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  z-index: 100;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  display: block;
+  position: absolute;
+  transition: all 0.01s ease-out;
+  cursor: pointer;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+.btn:active {
+  transform: scale(0.99);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: rgb(227, 227, 227);
+}
+.btn--new {
+  /* left: 50%; */
+  top: 5rem;
+}
+.btn--hold {
+  bottom: 6rem;
+}
+.btn--roll {
+  bottom: 12rem;
+}
+.player-1 {
+}
+
+.dice-box {
+  z-index: 100;
+  width: 9rem;
+  height: 9rem;
+  position: absolute;
+  top: 30%;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+.img {
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+.player-active {
+  background-color: rgb(224, 176, 204);
+  border: 5px solid rgb(28, 85, 240);
+}
+.player-0-winner,
+.player-1-winner {
+  position: absolute;
+  width: 100%;
+  top: -40px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  border: none;
+  font-size: 5rem;
+}
+.overlay {
+  background-color: #333;
+  z-index: 0;
+  color: white;
+}
